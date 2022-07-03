@@ -10,7 +10,7 @@ import (
 // this package handles the results
 
 type Result struct {
-	line       string
+	Line       string
 	LineNumber int
 	Path       string
 }

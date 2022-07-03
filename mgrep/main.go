@@ -12,7 +12,7 @@ import (
 )
 
 func discoverDirs(wl *worklist.Worklist, path string) {
-	entries, er := os.ReadDir(path)
+	entries, err := os.ReadDir(path)
 	if err != nil {
 		fmt.Println("Readdir error:", err)
 		return
@@ -50,13 +50,13 @@ func main() {
 	}()
 
 	for i := 0; i < numWorkers; i++ {
-		workerWg.Add(1)
+		workersWg.Add(1)
 		go func() {
 			defer workersWg.Done()
 			for {
 				workEntry := wl.Next()
 				if workEntry.Path != "" {
-					workerResult := worker.FindInFile(workentry.Path, args.SearchTerm)
+					workerResult := worker.FindInFile(workEntry.Path, args.SearchTerm)
 					if workerResult != nil {
 						for _, r := range workerResult.Inner {
 							results <- r
