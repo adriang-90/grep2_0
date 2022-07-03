@@ -1,4 +1,4 @@
-package worlist
+package worklist
 
 // this package keeps track of all the files
 

@@ -7,7 +7,7 @@ import (
 	"sync"
 
 	"github.com/adriang-90/grep2_0/worker"
-
+	"github.com/adriang-90/grep2_0/worklist"
 	"github.com/alexflint/go-arg"
 )
 
