@@ -6,10 +6,8 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/adriang-90/grep2_0/rep2_0/worklist"
 	"github.com/adriang-90/grep2_0/worker"
 
-	"github.com/adriang-90/grep2_0/worker"
 	"github.com/alexflint/go-arg"
 )
 
